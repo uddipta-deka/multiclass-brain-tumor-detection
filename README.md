@@ -62,15 +62,17 @@ Stage 2 — Fine-Tuning
 | ResNet50 | 93.30% | 0.1806 | **96.34%** | **0.0984** |
 | EfficientNetB0 | **94.46%** | **0.1504** | 93.66% | 0.1862 |
 
-### Final Comparison (Best per model)
+---
 
-| Model | Best Val Accuracy | Best Val Loss | Selected Stage |
-|---|---|---|---|
-| VGG16 | 96.07% | 0.1289 | Stage 2 |
-| ResNet50 | **96.34%** | **0.0984** | Stage 2 |
-| EfficientNetB0 | 94.46% | 0.1504 | Stage 1 |
+### 🔹 Final Model Comparison
 
-**ResNet50 achieved the best overall performance at 96.34% validation accuracy.**
+| Model | Test Accuracy | Macro F1 | Selected Stage |
+|------|-------------|----------|----------------|
+| Baseline CNN | 86% | 0.86 | — |
+| VGG16 | 92% | 0.92 | Stage 2 |
+| ResNet50 | **92%** | **0.92** | Stage 2 |
+| EfficientNetB0 | 91% | 0.90 | Stage 1 |
+
 
 ---
 
@@ -84,13 +86,41 @@ Stage 2 — Fine-Tuning
 
 
 ---
+### 🔍 Hardest Class: Glioma
+- Lowest recall across models (~0.70–0.78)
+- High similarity with other tumor classes
 
+
+###  Best Model
+
+**ResNet50 (Stage 2)**
+- Best overall performance
+- Achieved the highest validation accuracy (96.34%)
+- Demonstrated stable convergence during fine-tuning
+- Balanced accuracy and efficiency
+
+##  Evaluation Metrics
+
+- Confusion Matrix
+- Precision / Recall
+- Macro F1-Score
+- Classification Report
+
+
+## 🧪 Explainability (Grad-CAM)
+
+- Generated class activation maps
+- Visualized tumor regions
+- Improved interpretability for medical use
 
 
 ## Technologies
 
 `Python` `TensorFlow` `Keras` `OpenCV` `NumPy` `Matplotlib` `Seaborn` `Jupyter Notebook`
 
+
+
+## ⭐ Star this repo if you found it useful!
 ---
 
 
